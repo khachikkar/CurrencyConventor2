@@ -1,5 +1,33 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 
+try{
+    fetch("https://open.er-api.com/v6/latest/AMD")
+    .then(response=>{
+       return response.json()
+    })
+    .then(res=>{
+        let data = ["USD", "RUB", "GEL"]
+        let ctab = document.getElementById("ctab")
+        data.forEach((item, idx)=>{
+
+let el = document.createElement("p")
+
+let current =  1 / res.rates[data[idx]]
+
+el.textContent = `${data[idx]} : ${current.toFixed(2)}`
+ctab.appendChild(el)
+
+        })
+
+       
+    
+    })
+}catch(err){
+    console.log(err);
+}
+    
+
+
 let currList1 = document.getElementById("currList1")
 let currList2 =document.getElementById("currList2")
 let button = document.getElementById("convertButton")
