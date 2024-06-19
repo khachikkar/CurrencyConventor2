@@ -20,6 +20,6 @@ div{
 @media (max-width: 600px) {
   
     div{
-        transform: scale(1.1);
+        transform: scale(1.001);
     }
 }
