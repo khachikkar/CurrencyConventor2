@@ -1,4 +1,6 @@
-
+body{
+    background-color: lightpink;
+}
 #currList1 , #currList2 {
     width: 100px;
     height: 30px;
@@ -18,6 +20,6 @@ div{
 @media (max-width: 600px) {
   
     div{
-        transform: scale(1.01);
+        transform: scale(1.1);
     }
 }
